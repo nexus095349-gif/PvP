@@ -12,7 +12,6 @@ if getgenv().__WindUIWindow then
     getgenv().__WindUIWindow = nil
 end
 
--- โหลด WindUI
 local WindUI = loadstring(
     game:HttpGet(
         "https://github.com/Footagesus/WindUI/releases/download/"
@@ -21,168 +20,180 @@ local WindUI = loadstring(
     )
 )()
 
-
 WindUI:AddTheme({
-    Name = "Obsidian Glass",
-
-    Primary = Color3.fromHex("#F4F4F5"),
-
-    White = Color3.fromRGB(255, 255, 255),
-    Black = Color3.fromRGB(0, 0, 0),
-
-    Dialog = Color3.fromHex("#141416"),
-
-    Background = Color3.fromHex("#080809"),
+    Name = "Destiny Neon Violet",
+    Primary = Color3.fromHex("#F0E7FF"),
+    White = Color3.fromHex("#FFFFFF"),
+    Black = Color3.fromHex("#030108"),
+    Dialog = Color3.fromHex("#120722"),
+    Background = Color3.fromHex("#080312"),
     BackgroundTransparency = 0,
-
-    Hover = Color3.fromHex("#202023"),
-
-    PanelBackground = Color3.fromRGB(255, 255, 255),
-    PanelBackgroundTransparency = .97,
-
-    WindowBackground = Color3.fromHex("#080809"),
-    WindowShadow = Color3.fromRGB(0, 0, 0),
-
-    WindowTopbarTitle = Color3.fromHex("#FAFAFA"),
-    WindowTopbarAuthor = Color3.fromHex("#71717A"),
-    WindowTopbarIcon = Color3.fromHex("#A1A1AA"),
-    WindowTopbarButtonIcon = Color3.fromHex("#D4D4D8"),
-
-    WindowSearchBarBackground = Color3.fromHex("#111113"),
-
+    Hover = Color3.fromHex("#4A2080"),
+    PanelBackground = Color3.fromHex("#8B5CF6"),
+    PanelBackgroundTransparency = 0.82,
+    WindowBackground = Color3.fromHex("#080312"),
+    WindowShadow = Color3.fromHex("#C084FC"),
+    WindowTopbarTitle = Color3.fromHex("#F7F0FF"),
+    WindowTopbarAuthor = Color3.fromHex("#DDD6FE"),
+    WindowTopbarIcon = Color3.fromHex("#C084FC"),
+    WindowTopbarButtonIcon = Color3.fromHex("#E9D5FF"),
+    WindowSearchBarBackground = Color3.fromHex("#2A1055"),
     -- Tabs
-    TabBackground = Color3.fromHex("#FFFFFF"),
-    TabBackgroundHover = Color3.fromHex("#FFFFFF"),
-    TabBackgroundHoverTransparency = .95,
-
-    TabBackgroundActive = Color3.fromHex("#FFFFFF"),
-    TabBackgroundActiveTransparency = .87,
-
-    TabText = Color3.fromHex("#A1A1AA"),
-    TabTextTransparency = .25,
+    TabBackground = Color3.fromHex("#6B21A8"),
+    TabBackgroundHover = Color3.fromHex("#8B5CF6"),
+    TabBackgroundHoverTransparency = 0.80,
+    TabBackgroundActive = Color3.fromHex("#C084FC"),
+    TabBackgroundActiveTransparency = 0.70,
+    TabText = Color3.fromHex("#E9D5FF"),
+    TabTextTransparency = 0.12,
     TabTextTransparencyActive = 0,
-
-    TabTitle = Color3.fromHex("#FAFAFA"),
-
-    TabIcon = Color3.fromHex("#D4D4D8"),
-    TabIconTransparency = .2,
+    TabTitle = Color3.fromHex("#FFFFFF"),
+    TabIcon = Color3.fromHex("#D8B4FE"),
+    TabIconTransparency = 0.10,
     TabIconTransparencyActive = 0,
-
     TabBorderTransparency = 1,
-    TabBorderTransparencyActive = .72,
-    TabBorder = Color3.fromRGB(255, 255, 255),
-
+    TabBorderTransparencyActive = 0.25,
+    TabBorder = Color3.fromHex("#E9D5FF"),
+    TabSectionText = Color3.fromHex("#C4B5FD"),
+    TabSectionIcon = Color3.fromHex("#D8B4FE"),
     -- Elements
-    ElementBackground = Color3.fromHex("#FFFFFF"),
-    ElementBackgroundTransparency = .96,
-
-    ElementBackgroundHover =
-        WindUI.Creator:AddColor("ElementBackground", "#FFFFFF", 1 / 13),
-
-    ElementTitle = Color3.fromHex("#F4F4F5"),
-    ElementDesc = Color3.fromHex("#8F8F98"),
-
-    -- ทำให้ Icon ชัดขึ้น
-    ElementIcon = Color3.fromHex("#F4F4F5"),
-
-    -- Popup
-    PopupBackground = Color3.fromHex("#111113"),
-    PopupBackgroundTransparency = "BackgroundTransparency",
-
-    PopupTitle = Color3.fromHex("#F4F4F5"),
-    PopupContent = Color3.fromHex("#A1A1AA"),
-    PopupIcon = Color3.fromHex("#D4D4D8"),
-
-    -- Dialog
-    DialogBackground = Color3.fromHex("#111113"),
-    DialogBackgroundTransparency = "BackgroundTransparency",
-
-    DialogTitle = Color3.fromHex("#FAFAFA"),
-    DialogContent = Color3.fromHex("#A1A1AA"),
-    DialogIcon = Color3.fromHex("#D4D4D8"),
-
+    ElementBackground = Color3.fromHex("#6B21A8"),
+    ElementBackgroundTransparency = 0.85,
+    ElementBackgroundHover = Color3.fromHex("#C084FC"),
+    ElementTitle = Color3.fromHex("#F0E7FF"),
+    ElementDesc = Color3.fromHex("#D8B4FE"),
+    ElementIcon = Color3.fromHex("#F0E7FF"),
+    -- Button
+    Button = Color3.fromHex("#8B5CF6"),
+    ButtonTransparency = 0,
+    ButtonHover = Color3.fromHex("#C084FC"),
+    ButtonText = Color3.fromHex("#FFFFFF"),
+    ButtonTitle = Color3.fromHex("#FFFFFF"),
+    ButtonIcon = Color3.fromHex("#FFFFFF"),
+    ButtonBorder = Color3.fromHex("#E9D5FF"),
+    ButtonBorderTransparency = 0.25,
+    -- Input / Textbox
+    Input = Color3.fromHex("#2A1055"),
+    InputBackground = Color3.fromHex("#2A1055"),
+    InputText = Color3.fromHex("#F7F0FF"),
+    InputPlaceholder = Color3.fromHex("#C084FC"),
+    InputBorder = Color3.fromHex("#A855F7"),
+    InputBorderTransparency = 0.40,
+    -- Dropdown
+    Dropdown = Color3.fromHex("#2A1055"),
+    DropdownBackground = Color3.fromHex("#2A1055"),
+    DropdownItem = Color3.fromHex("#E9D5FF"),
+    DropdownItemHover = Color3.fromHex("#7C3AED"),
+    DropdownItemHoverTransparency = 0.80,
+    DropdownItemActive = Color3.fromHex("#C084FC"),
+    DropdownItemText = Color3.fromHex("#FFFFFF"),
+    DropdownIcon = Color3.fromHex("#C084FC"),
+    DropdownTabBorder = Color3.fromHex("#A855F7"),
+    -- Keybind
+    Keybind = Color3.fromHex("#2A1055"),
+    KeybindBackground = Color3.fromHex("#2A1055"),
+    KeybindText = Color3.fromHex("#F0E7FF"),
+    KeybindBorder = Color3.fromHex("#A855F7"),
+    KeybindBorderTransparency = 0.40,
+    -- Colorpicker
+    Colorpicker = Color3.fromHex("#8B5CF6"),
+    ColorpickerHue = Color3.fromHex("#C084FC"),
+    ColorpickerBorder = Color3.fromHex("#E9D5FF"),
+    -- Popup (แก้ไขให้เป็นตัวเลขแล้ว)
+    PopupBackground = Color3.fromHex("#2A1055"),
+    PopupBackgroundTransparency = 0,
+    PopupTitle = Color3.fromHex("#F0E7FF"),
+    PopupContent = Color3.fromHex("#D8B4FE"),
+    PopupIcon = Color3.fromHex("#C084FC"),
+    -- Dialog (แก้ไขให้เป็นตัวเลขแล้ว)
+    DialogBackground = Color3.fromHex("#2A1055"),
+    DialogBackgroundTransparency = 0,
+    DialogTitle = Color3.fromHex("#FFFFFF"),
+    DialogContent = Color3.fromHex("#D8B4FE"),
+    DialogIcon = Color3.fromHex("#E9D5FF"),
     -- Toggle
-    Toggle = Color3.fromHex("#27272A"),
-    ToggleBar = Color3.fromRGB(255, 255, 255),
-
+    Toggle = Color3.fromHex("#C084FC"),
+    ToggleBar = Color3.fromHex("#FFFFFF"),
+    ToggleEnabled = Color3.fromHex("#C084FC"),
+    ToggleDisabled = Color3.fromHex("#3B1E69"),
     -- Checkbox
-    Checkbox = Color3.fromHex("#E4E4E7"),
-    CheckboxIcon = Color3.fromRGB(255, 255, 255),
-
-    CheckboxBorder = Color3.fromRGB(255, 255, 255),
-    CheckboxBorderTransparency = .72,
-
+    Checkbox = Color3.fromHex("#C084FC"),
+    CheckboxIcon = Color3.fromHex("#FFFFFF"),
+    CheckboxBorder = Color3.fromHex("#E9D5FF"),
+    CheckboxBorderTransparency = 0.30,
     -- Slider
-    SliderIcon = Color3.fromHex("#D4D4D8"),
-    Slider = Color3.fromHex("#E4E4E7"),
-    SliderThumb = Color3.fromRGB(255, 255, 255),
-
-    SliderIconFrom = Color3.fromHex("#52525B"),
-    SliderIconTo = Color3.fromHex("#F4F4F5"),
-
+    SliderIcon = Color3.fromHex("#F0E7FF"),
+    Slider = Color3.fromHex("#E9D5FF"),
+    SliderThumb = Color3.fromHex("#FFFFFF"),
+    SliderIconFrom = Color3.fromHex("#A855F7"),
+    SliderIconTo = Color3.fromHex("#FFFFFF"),
     -- Tooltip
-    Tooltip = Color3.fromHex("#1A1A1D"),
-    TooltipText = Color3.fromRGB(255, 255, 255),
-
-    TooltipSecondary = Color3.fromHex("#71717A"),
-    TooltipSecondaryText = Color3.fromRGB(255, 255, 255),
-
+    Tooltip = Color3.fromHex("#3B1E69"),
+    TooltipText = Color3.fromHex("#FFFFFF"),
+    TooltipSecondary = Color3.fromHex("#D8B4FE"),
+    TooltipSecondaryText = Color3.fromHex("#FFFFFF"),
     -- Sections
-    TabSectionIcon = Color3.fromHex("#D4D4D8"),
-    SectionIcon = Color3.fromHex("#D4D4D8"),
-
-    SectionExpandIcon = Color3.fromRGB(255, 255, 255),
-    SectionExpandIconTransparency = .35,
-
-    SectionBox = Color3.fromRGB(255, 255, 255),
-    SectionBoxTransparency = .965,
-
-    SectionBoxBorder = Color3.fromRGB(255, 255, 255),
-    SectionBoxBorderTransparency = .8,
-
-    SectionBoxBackground = Color3.fromRGB(255, 255, 255),
-    SectionBoxBackgroundTransparency = .975,
-
+    SectionIcon = Color3.fromHex("#D8B4FE"),
+    SectionText = Color3.fromHex("#D8B4FE"),
+    SectionTitle = Color3.fromHex("#F0E7FF"),
+    SectionExpandIcon = Color3.fromHex("#FFFFFF"),
+    SectionExpandIconTransparency = 0.15,
+    SectionBox = Color3.fromHex("#C084FC"),
+    SectionBoxTransparency = 0.82,
+    SectionBoxBorder = Color3.fromHex("#E9D5FF"),
+    SectionBoxBorderTransparency = 0.45,
+    SectionBoxBackground = Color3.fromHex("#8B5CF6"),
+    SectionBoxBackgroundTransparency = 0.85,
     -- Search
-    SearchBarBorder = Color3.fromRGB(255, 255, 255),
-    SearchBarBorderTransparency = .8,
-
+    SearchBarBorder = Color3.fromHex("#A855F7"),
+    SearchBarBorderTransparency = 0.50,
+    SearchBarText = Color3.fromHex("#F0E7FF"),
+    SearchBarPlaceholder = Color3.fromHex("#C084FC"),
+    SearchBarIcon = Color3.fromHex("#C084FC"),
     -- Notification
-    Notification = Color3.fromHex("#111113"),
-
-    NotificationTitle = Color3.fromHex("#F4F4F5"),
+    Notification = Color3.fromHex("#2A1055"),
+    NotificationTitle = Color3.fromHex("#F0E7FF"),
     NotificationTitleTransparency = 0,
-
-    NotificationContent = Color3.fromHex("#A1A1AA"),
-    NotificationContentTransparency = .3,
-
-    NotificationDuration = Color3.fromRGB(255, 255, 255),
-    NotificationDurationTransparency = .9,
-
-    NotificationBorder = Color3.fromRGB(255, 255, 255),
-    NotificationBorderTransparency = .8,
-
-    DropdownTabBorder = Color3.fromRGB(255, 255, 255),
-
-    LabelBackground = Color3.fromRGB(255, 255, 255),
-    LabelBackgroundTransparency = .96,
+    NotificationContent = Color3.fromHex("#D8B4FE"),
+    NotificationContentTransparency = 0.10,
+    NotificationDuration = Color3.fromHex("#D8B4FE"),
+    NotificationDurationTransparency = 0.10,
+    NotificationBorder = Color3.fromHex("#C084FC"),
+    NotificationBorderTransparency = 0.40,
+    NotificationIcon = Color3.fromHex("#D8B4FE"),
+    -- Label
+    LabelBackground = Color3.fromHex("#C084FC"),
+    LabelBackgroundTransparency = 0.82,
+    LabelText = Color3.fromHex("#FFFFFF"),
+    -- Scrollbar
+    Scrollbar = Color3.fromHex("#C084FC"),
+    ScrollbarBackground = Color3.fromHex("#2A1055"),
+    ScrollbarTransparency = 0.25,
+    -- Divider / Line
+    Divider = Color3.fromHex("#A855F7"),
+    DividerTransparency = 0.60,
+    Line = Color3.fromHex("#A855F7"),
+    LineTransparency = 0.60,
 })
-
 
 local windowSuccess, Window = pcall(function()
     return WindUI:CreateWindow({
         Title = "Project Destiny [v3.0]",
-        Icon = "rbxassetid://97596339693490",
+        Icon = "rbxassetid://82953555902230",
         Author = "System Online • Access Granted",
         Folder = "Destiny Hub",
         Size = UDim2.fromOffset(620, 520),
-        Theme = "Obsidian Glass",
+        Theme = "Destiny Neon Violet",
         Resizable = true,
         SideBarWidth = 200,
         HideSearchBar = false,
         ScrollBarEnabled = true,
     })
 end)
+
+
+Window:SetIconSize(40) 
+
 
 getgenv().__WindUIWindow = Window
 
@@ -217,46 +228,7 @@ task.spawn(function()
 end)
 
 
-Config:Button({
-    Title = "Save Configuration",
-    Desc = "บันทึกการตั้งค่าปัจจุบันทั้งหมด",
-    Callback = function()
-        if MyConfig and typeof(MyConfig.Save) == "function" then
-            MyConfig:Save()
-            WindUI:Notify({
-                Title = "System Saved",
-                Content = "บันทึกการตั้งค่าลงระบบเรียบร้อยแล้ว!",
-                Icon = "bell-ring",
-                Duration = 3,
-            })
-        else
-            WindUI:Notify({
-                Title = "Error",
-                Content = "ไม่พบระบบ Config หรือยังไม่ได้โหลด!",
-                Icon = "x",
-                Duration = 3,
-            })
-        end
-    end,
-})
 
-Config:Button({
-    Title = "Reset Configuration",
-    Desc = "ลบไฟล์เซฟและคืนค่าเริ่มต้น",
-    Callback = function()
-        pcall(function()
-            if MyConfig and typeof(MyConfig.Delete) == "function" then
-                MyConfig:Delete()
-            end
-        end)
-        WindUI:Notify({
-            Title = "System Warning",
-            Content = "ล้างค่าการตั้งค่าทั้งหมดเรียบร้อยแล้ว!",
-            Icon = "bell-ring", 
-            Duration = 3,
-        })
-    end,
-})
 
 
 
@@ -271,14 +243,7 @@ local executorName =
     (identifyexecutor and identifyexecutor())
     or (getexecutorname and getexecutorname())
     or "Unknown"
-
--- Device
-local device = "PC"
-if UIS.TouchEnabled and not UIS.KeyboardEnabled then
-    device = "Mobile"
-elseif UIS.TouchEnabled and UIS.KeyboardEnabled then
-    device = "Laptop"
-end
+    
 
 -- Player
 local username = LP.Name
@@ -286,34 +251,25 @@ local displayName = LP.DisplayName
 
 local dashboardText = [[
 
-<font color="#555555">━━━━━━━━━━━━━━━━━━━━━━━━</font>
 <font color="#FFFFFF"><b> SYSTEM INFORMATION</b></font>
-
-<font color="#777777">●</font> Status     : <font color="#00FF88"><b>ONLINE</b></font>
-<font color="#777777">●</font> Executor   : <font color="#00BFFF">]] .. executorName .. [[</font>
-<font color="#777777">●</font> Device     : <font color="#FFA500">]] .. device .. [[</font>
 <font color="#555555">━━━━━━━━━━━━━━━━━━━━━━━━</font>
+<font color="#777777">●</font> Executor   : <font color="#00BFFF">]] .. executorName .. [[</font>
+
 <font color="#FFFFFF"><b> SCRIPT INFORMATION</b></font>
 
-<font color="#777777">●</font> Version    : <font color="#B57CFF"><b>v2.0.0</b></font>
-<font color="#777777">●</font> Status     : <font color="#00FF88"><b>UP TO DATE</b></font>
-<font color="#777777">●</font> Creator    : <font color="#FF7043">Destiny Hub</font>
-
-<font color="#555555">━━━━━━━━━━━━━━━━━━━━━━━━</font>
 <font color="#888888">Welcome back, <font color="#FFFFFF">]] .. displayName .. [[</font>.
 Enjoy your experience with <font color="#B57CFF">Destiny Hub</font>.</font>
 ]]
-
 
 
 Home:Paragraph({
     Title = "● Destiny Hub | Dashboard",
     Desc = dashboardText,
 
-    ImageSize = 23,
+    ImageSize = 50,
 
-    Thumbnail = "rbxassetid://79823581173943",
-    ThumbnailSize = 48,
+    Thumbnail = "rbxassetid://71825656372618",
+    ThumbnailSize = 70,
         Buttons = {
             {
                 Title = "Copy Discord",
@@ -334,6 +290,49 @@ Home:Paragraph({
     
 })
 
+
+local Group = Config:Group({})
+Group:Button({
+    Title = "Save",
+    Icon  = "save",
+    Callback = function()
+        if MyConfig and typeof(MyConfig.Save) == "function" then
+            MyConfig:Save()
+            WindUI:Notify({
+                Title = "System Saved",
+                Content = "บันทึกการตั้งค่าลงระบบเรียบร้อยแล้ว!",
+                Icon = "bell-ring",
+                Duration = 3,
+            })
+        else
+            WindUI:Notify({
+                Title = "Error",
+                Content = "ไม่พบระบบ Config หรือยังไม่ได้โหลด!",
+                Icon = "x",
+                Duration = 3,
+            })
+        end
+    end,
+})
+
+Group:Button({
+    Title = "Reset",
+    Icon  = "rotate-ccw",
+    Callback = function()
+        pcall(function()
+            if MyConfig and typeof(MyConfig.Delete) == "function" then
+                MyConfig:Delete()
+            end
+        end)
+        WindUI:Notify({
+            Title = "System Warning",
+            Content = "ล้างค่าการตั้งค่าทั้งหมดเรียบร้อยแล้ว!",
+            Icon = "bell-ring", 
+            Duration = 3,
+        })
+    end,
+})
+Config:Divider() 
 
 getgenv().SavedFOVRadius = getgenv().SavedFOVRadius or getgenv().FOVRadius
 getgenv().SilentAimMode = getgenv().SilentAimMode or "FOV"
@@ -998,30 +997,40 @@ RunService.RenderStepped:Connect(function(dt)
     end
 end)
 
+
 getgenv().HitboxEnabled = true
-getgenv().HitboxSize = 10
+getgenv().HitboxSize = 8
 
--- ==========================================
-RunService.RenderStepped:Connect(function()
-    if not getgenv().HitboxEnabled then return end
+task.spawn(function()
+    while true do
+        if getgenv().HitboxEnabled then
+            for _, p in ipairs(Players:GetPlayers()) do
+                if p ~= LocalPlayer and p.Character then
+                    local char = p.Character
+                    local hum = char:FindFirstChildOfClass("Humanoid")
 
-    for _, p in ipairs(Players:GetPlayers()) do
-        if p ~= LocalPlayer and p.Character then
-            local char = p.Character
-            local hum = char:FindFirstChildOfClass("Humanoid")
-            
-            if hum and hum.Health > 0 then
-                local head = char:FindFirstChild("Head")
-                if head then
-                    head.Size = Vector3.new(getgenv().HitboxSize, getgenv().HitboxSize, getgenv().HitboxSize)
-                    head.Transparency = 1
-                    head.CanCollide = false
-                    head.CastShadow = false
+                    if hum and hum.Health > 0 then
+                        local head = char:FindFirstChild("Head")
+
+                        if head then
+                            head.Size = Vector3.new(
+                                getgenv().HitboxSize,
+                                getgenv().HitboxSize,
+                                getgenv().HitboxSize
+                            )
+                            head.Transparency = 1
+                            head.CanCollide = false
+                            head.CastShadow = false
+                        end
+                    end
                 end
             end
         end
+
+        task.wait(1)
     end
 end)
+
 
 local function initializeSkillSettings()
 
@@ -2321,7 +2330,6 @@ local Input = System:Input({
 })
 
 
-Config:Divider()
 local Configjson = Config:Section({ 
     Title = "Config.json", 
     Icon = "file" -- หรือใช้ "folder", "save" ก็ได้ครับ
@@ -2398,27 +2406,33 @@ Config:Button({
         end)
     end,
 })
-
 local RunService = game:GetService("RunService")
 local Stats = game:GetService("Stats")
 
 local FPSTag = Window:Tag({
     Title = "FPS: --",
     Icon = "gauge",
-    Color = Color3.fromRGB(240, 240, 240),
+    Color = Color3.fromHex("#C4B5FD"), -- ม่วงอ่อนสดใส
 })
 
 local frameCount, lastUpdate = 0, os.clock()
-
 RunService.RenderStepped:Connect(function()
     frameCount = frameCount + 1
     local now = os.clock()
     local elapsed = now - lastUpdate
     
-    -- เปลี่ยนจาก 0.5 เป็น 1.0 วินาที เพื่อลดการคำนวณซ้ำบ่อยเกินไป
     if elapsed >= 1.0 then
         local fps = math.floor(frameCount / elapsed)
         FPSTag:SetTitle(string.format("FPS: %d", fps))
+        
+        -- เปลี่ยนสีตามระดับ FPS เพิ่มเติมให้สวยขึ้น
+        if fps >= 90 then
+            FPSTag:SetColor(Color3.fromHex("#C4B5FD")) -- ม่วงสด (ดีเยี่ยม)
+        elseif fps >= 60 then
+            FPSTag:SetColor(Color3.fromHex("#C4B5FD")) -- ม่วงอ่อน (ดี)
+        else
+            FPSTag:SetColor(Color3.fromHex("#C4B5FD")) -- ม่วงขาว (ปกติ)
+        end
         
         frameCount = 0
         lastUpdate = now
@@ -2428,7 +2442,7 @@ end)
 local PingTag = Window:Tag({
     Title = "Ping: --ms",
     Icon = "wifi",
-    Color = Color3.fromRGB(180, 180, 180),
+    Color = Color3.fromHex("#A855F7"), -- ม่วงหลัก
 })
 
 task.spawn(function()
@@ -2446,6 +2460,15 @@ task.spawn(function()
         
         if success and ping then
             PingTag:SetTitle(string.format("Ping: %dms", ping))
+            
+            -- เปลี่ยนสีตามค่า Ping เพิ่มความมีชีวิต
+            if ping <= 50 then
+                PingTag:SetColor(Color3.fromHex("#C4B5FD")) -- ม่วงสด (เร็ว)
+            elseif ping <= 100 then
+                PingTag:SetColor(Color3.fromHex("#C4B5FD")) -- ม่วงปกติ
+            else
+                PingTag:SetColor(Color3.fromHex("#C4B5FD")) -- ม่วงเข้ม (ช้า)
+            end
         end
         
         task.wait(2)
